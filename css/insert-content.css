@@ -1,0 +1,100 @@
+@charset "utf-8";
+body {
+    text-align: center;
+    padding: .4rem;
+    background-color: #A3A0F2;
+}
+
+h1 {
+    font-weight: normal;
+    padding: 1rem;
+}
+
+header#container {
+    padding: .4rem;
+}
+
+form p {
+    font-size: 13pt;
+    margin-bottom: .5rem;
+}
+
+textarea {
+    resize: none;
+}
+
+textarea,
+input {
+    border: 1px solid gray;
+}
+
+textarea,
+input,
+button {
+    padding: .3rem;
+    border-radius: .3rem;
+    margin-bottom: 1rem;
+    font-size: 12pt;
+}
+
+input {
+    width: 10rem;
+}
+
+button#send {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #da552f;
+    width: 10rem;
+    height: 2.8rem;
+    color: white;
+    font-size: 14pt;
+    transition: ease-out .3s;
+    cursor: pointer;
+}
+
+button#send:hover {
+    opacity: 0.8;
+}
+
+@media(min-width: 700px) {
+    form {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 700px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 8vh 25vh 10vh 5vh;
+    }
+    div#unidade {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 1;
+    }
+    div#descricao {
+        grid-row: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    div#notas {
+        grid-row: 2;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    div#palavra {
+        grid-row: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    div#significado {
+        grid-row: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    div#botao {
+        grid-row: 4;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}

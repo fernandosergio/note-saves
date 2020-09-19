@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserir dados</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/insert-content.css">
+    <style>
+        button {
+            width: 10rem;
+            height: 2.8rem;
+            border-radius: .2rem;
+            margin-bottom: 1rem;
+        }
+        
+        button:hover {
+            cursor: pointer;
+            opacity: .74;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="../index.html"><button>Home</button></a>
+    <h1>Book One form</h1>
+    <header id="container">
+        <form>
+            <div id="unidade">
+                <label for="inpUnit"><p>Digite a Unit:</p></label>
+                <input type="text" name="inpUnit" id="inpUnit" placeholder="Ex: Unit 20">
+            </div>
+            <div id="descricao">
+                <label for="inpDescription"><p>Digite o conteúdo da unit</p></label>
+                <textarea name="inpDescription" id="inpDescription" cols="30" rows="10" placeholder="Digite sobre o conteúdo da unit"></textarea>
+            </div>
+            <div id="notas">
+                <label for="inpAnotation"><p>Anotações sobre a Unit</p></label>
+                <textarea name="inpNotes" id="inpNotes" cols="30" rows="10" placeholder="Digite sobre anotações sobre a unit"></textarea>
+            </div>
+            <div id="palavra">
+                <label for="inpWord"><p>Digite novas palavras nesta unit</p></label>
+                <input type="text" name="inpWord" id="inpWord" placeholder="Ex: Water">
+            </div>
+            <div id="significado">
+                <label for="inpMeaning"><p>Digite o seu significado</p></label>
+                <input type="text" name="inpMeaning" id="inpMeaning" placeholder="Ex: Àgua">
+            </div>
+            <div id="botao">
+                <button id="send">Enviar</button>
+            </div>
+        </form>
+    </header>
+</body>
+
+</html>
