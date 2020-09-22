@@ -37,7 +37,7 @@ const deletando = function(element) {
     })
 }
 
-const enviando = function(element) {
+const enviando = async function(element) {
     element.addEventListener('click', () => {
         const item = element.parentElement.parentElement.querySelectorAll('textarea')
 
@@ -51,6 +51,10 @@ const enviando = function(element) {
             const words = item[2].value
 
             const url = `http://localhost:3000?unit=${ddd}&content=${content}&notes=${notes}&words=${words}`
+
+            const del = `http://localhost:3000?unit=${ddd}&del=1`
+
+            await api(del)
 
             api(url)
 
