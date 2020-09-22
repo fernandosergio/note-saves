@@ -37,7 +37,7 @@ const deletando = function(element) {
     })
 }
 
-const enviando = async function(element) {
+const enviando = function(element) {
     element.addEventListener('click', () => {
         const item = element.parentElement.parentElement.querySelectorAll('textarea')
 
@@ -54,9 +54,8 @@ const enviando = async function(element) {
 
             const del = `http://localhost:3000?unit=${ddd}&del=1`
 
-            await api(del)
-
-            api(url)
+            api(del)
+            setTimeout(() => api(url), 2000)
 
             for (let i = 0; i < item.length; i++) {
                 item[i].readOnly = true

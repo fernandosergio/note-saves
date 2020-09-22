@@ -45,6 +45,7 @@ async function pageBookOne(req, res) {
     WHERE EXISTS(
         SELECT units.unit
         FROM units
+        ORDER BY unit ASC
     )`
 
     try {
