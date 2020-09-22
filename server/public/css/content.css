@@ -1,0 +1,119 @@
+@charset "utf-8";
+body {
+    text-align: center;
+    padding: .4rem;
+    background-color: #A3A0F2;
+}
+
+
+/* Lugar aonde vai ficar os inputs */
+
+
+/* NÃO ESQUECER DE PASSAR PRA OUTRO DOCUMENTO */
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    padding: 2rem;
+    background-color: #222059;
+    border-radius: .2rem;
+}
+
+main div:nth-child(n) {
+    border-radius: .5rem;
+}
+
+main textarea:nth-child(n) {
+    border-radius: .5rem
+}
+
+main h2 {
+    padding: 2rem;
+    font-weight: normal;
+    background-color: #35328C;
+    color: white;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+}
+
+div.units {
+    padding: 1rem;
+    background-color: #A3A0F2;
+    margin-bottom: 2.7rem;
+    position: relative;
+}
+
+div.div-unit {
+    padding: .5rem;
+    font-size: 14pt;
+    background-color: #22F2DD;
+    margin-bottom: 1rem;
+}
+
+textarea {
+    width: 100%;
+    height: 5rem;
+    background-color: #CFCEF2;
+    text-align: justify;
+    text-indent: 1rem;
+    resize: none;
+    outline: none;
+    margin-bottom: .5rem;
+    font-size: 12pt;
+    cursor: text;
+}
+
+textarea:read-only {
+    cursor: default;
+}
+
+textarea:read-only:focus {
+    border: 2px solid red;
+}
+
+textarea:focus {
+    border: 2px solid green;
+}
+
+div.icone {
+    background-color: blanchedalmond;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+div.icone:hover {
+    opacity: .8;
+}
+
+div.icons {
+    display: flex;
+    justify-content: center;
+    font-size: 18pt;
+}
+
+div.icone.trash {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+div.icone.pen {
+    left: .5rem;
+    bottom: -2.2rem;
+}
+
+div.icone.submit {
+    width: 6rem;
+    font-size: 25pt;
+}
+
+div.icone.add {
+    margin-left: auto;
+    margin-right: auto;
+    width: 6rem;
+    font-size: 20pt;
+}
