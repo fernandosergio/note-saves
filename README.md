@@ -11,6 +11,8 @@ Essa aplicação salva informações, anotações em um bando de dados para leit
 
 ### Servidor
 
+É aonde fica os arquivos que serão mostrados no navegador.
+
 #### Client-side:
 
 Utliza Javascript sem frameworks, css e html.
@@ -24,6 +26,9 @@ dados importados do banco da dados no front-end
 
 ### API
 
+Recebe os dados do servidor e manipula os dados recebidos na query string no banco  
+de dados.
+
 #### Client-Side:
 
 Apenas html para mostrar os dados
@@ -31,5 +36,3 @@ Apenas html para mostrar os dados
 #### Server-side:
 
 Utiliza Nodejs com os frameworks express, nunjucks, cors e sqlite-async.
-Recebe os dados do servidor e adiciona os dados recebidos na query string no banco  
-de dados e exclui também.
