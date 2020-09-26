@@ -1,7 +1,9 @@
 # note-saves
 
 
- >npm i  para instalar as dependências do projeto
+ ```
+ npm i  para instalar as dependências do projeto
+```
 
 Essa aplicação salva informações, anotações em um bando de dados para leitura e utiliza uma api.
 
