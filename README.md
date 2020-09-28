@@ -33,6 +33,7 @@ unit : a unidade que você deseja adicionar
 content: o conteudo da unidade
 notes: notas a mais sobre a unidade
 words: palavras da unidade
+del: para deletar a unit, del=1
 
 #### Client-Side:
 
