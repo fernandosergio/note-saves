@@ -44,15 +44,16 @@
                 </div>
 
                 <div class="div-notes">
-                    {% if unit.notes == "undefined"%}
+                    {% if unit.notes == ""%}
                     <textarea readonly>Sem conteúdo</textarea> {% else %}
                     <textarea readonly>{{unit.notes}}</textarea> {%endif%}
                 </div>
 
                 <div class="div-words">
-                    {% if unit.words == "undefined"%}
+                    {% if unit.words == ""%}
                     <textarea readonly>Sem conteúdo</textarea> {% else %}
                     <textarea readonly>{{unit.words}}</textarea> {%endif%}
+
                 </div>
 
                 <div class="icons" id="{{unit.unit}}" title="Editar">
