@@ -5,17 +5,23 @@ body {
     background-color: #A3A0F2;
 }
 
+div#navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
 
-/* Lugar aonde vai ficar os inputs */
-
-
-/* NÃO ESQUECER DE PASSAR PRA OUTRO DOCUMENTO */
+div#navigation svg {
+    color: white;
+    cursor: pointer;
+}
 
 main {
     margin-left: auto;
     margin-right: auto;
     max-width: 1000px;
     padding: 2rem;
+    padding-top: .8rem;
     background-color: #222059;
     border-radius: .2rem;
 }
