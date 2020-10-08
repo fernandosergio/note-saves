@@ -122,7 +122,7 @@ async function pageBookFour(req, res) {
         const db = await database
         const book4 = await db.all(query)
 
-        return res.render("book-two.html", { book4 })
+        return res.render("book-four.html", { book4 })
     } catch (error) {
         console.log(error)
     }
