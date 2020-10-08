@@ -30,7 +30,7 @@ const deletando = function(element) {
         if (estado) {
 
             item.style.display = 'none'
-            const url = `http://localhost:3000?unit=${ddd}&del=1`
+            const url = `http://localhost:3000?book=${book}unit=${ddd}&del=1`
             api(url)
             document.location.reload(true)
         }
@@ -50,9 +50,9 @@ const enviando = function(element) {
             const notes = item[1].value
             const words = item[2].value
 
-            const url = `http://localhost:3000?unit=${ddd}&content=${content}&notes=${notes}&words=${words}`
+            const url = `http://localhost:3000?book=${book}unit=${ddd}&content=${content}&notes=${notes}&words=${words}`
 
-            const del = `http://localhost:3000?unit=${ddd}&del=1`
+            const del = `http://localhost:3000?book=${book}unit=${ddd}&del=1`
 
             api(del)
             setTimeout(() => api(url), 2000)
@@ -72,7 +72,6 @@ botEditar.forEach((element) => {
 botDeletar.forEach((element) => {
     deletando(element)
 })
-
 
 
 botEnviar.forEach((element) => {
