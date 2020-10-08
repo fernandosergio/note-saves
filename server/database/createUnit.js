@@ -1,6 +1,6 @@
 module.exports = async function(db, { unitsValue }) {
     const insertedUnit = await db.run(`
-        INSERT INTO units(
+        INSERT INTO unit1(
             unit,
             content,
             notes,
