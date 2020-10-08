@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KNN - Book One</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/content.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        button {
+            width: 10rem;
+            height: 2.8rem;
+            border-radius: .2rem;
+            margin-bottom: 1rem;
+        }
+        
+        button:hover {
+            cursor: pointer;
+            opacity: .74;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="/"><button>Home</button></a>
+
+    <main id="container">
+        <h2>Book four Notes</h2>
+        <div id="content">
+
+            {%for unit in book4%}
+
+            <div class="units" id="unit{{loop.index}}">
+                <div class="div-unit">
+                    <p>Unit {{unit.unit}}</p>
+                </div>
+
+                <div class="div-description">
+                    <textarea readonly>{{unit.content}}</textarea>
+                </div>
+
+                <div class="div-notes">
+                    {% if unit.notes == ""%}
+                    <textarea readonly>Sem conteúdo</textarea> {% else %}
+                    <textarea readonly>{{unit.notes}}</textarea> {%endif%}
+                </div>
+
+                <div class="div-words">
+                    {% if unit.words == ""%}
+                    <textarea readonly>Sem conteúdo</textarea> {% else %}
+                    <textarea readonly>{{unit.words}}</textarea> {%endif%}
+
+                </div>
+
+                <div class="icons" id="{{unit.unit}}" title="Editar">
+                    <div class="icone pen">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                    </div>
+
+                    <div class="icone trash" title="Excluir">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </div>
+
+                    <div class="icone submit" title="Enviar">
+                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+
+            {%endfor%}
+            <div class="icone add" title="Adicionar Unit">
+                <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+            </div>
+        </div>
+    </main>
+
+    <script src="../javascript/data-manipulation.js"></script>
+
+</body>
+
+</html>

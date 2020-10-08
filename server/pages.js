@@ -84,8 +84,52 @@ async function pageBookTwo(req, res) {
     }
 }
 
+async function pageBookThree(req, res) {
+    const query = `
+    SELECT *
+    FROM book3
+    WHERE EXISTS(
+        SELECT book3.unit
+        FROM book3
+        
+    )
+    ORDER BY unit ASC
+    `
+
+    try {
+        const db = await database
+        const book3 = await db.all(query)
+
+        return res.render("book-three.html", { book3 })
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+async function pageBookFour(req, res) {
+    const query = `
+    SELECT *
+    FROM book4
+    WHERE EXISTS(
+        SELECT book4.unit
+        FROM book4
+        
+    )
+    ORDER BY unit ASC
+    `
+
+    try {
+        const db = await database
+        const book4 = await db.all(query)
+
+        return res.render("book-two.html", { book4 })
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 function pageInsertData(req, res) {
     return res.render("insert-content.html", { unidades })
 }
 
-module.exports = { pageIndex, pageBookOne, pageBookTwo, pageInsertData }
+module.exports = { pageIndex, pageBookOne, pageBookTwo, pageBookThree, pageBookFour, pageInsertData }
