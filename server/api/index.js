@@ -28,22 +28,23 @@ api.get('/', manipulaDados)
 
 async function manipulaDados(req, res) {
 
-    const { unit, content, notes, words, del } = req.query
+    const { book, unit, content, notes, words, del } = req.query
 
     if (!unit && !content) {
 
-        const query = `
-        SELECT units.*
-        FROM units
-        WHERE EXISTS(
-            SELECT units.unit
-            FROM units
-        )`
+        const selecBook1 = `SELECT * FROM book1`
+        const selecBook2 = `SELECT * FROM book2`
+        const selecBook3 = `SELECT * FROM book3`
+        const selecBook4 = `SELECT * FROM book4`
 
         try {
             const db = await database
-            const units = await db.all(query)
-            return res.render("data.html", { units })
+            const book1 = await db.all(selecBook1)
+            const book2 = await db.all(selecBook2)
+            const book3 = await db.all(selecBook3)
+            const book4 = await db.all(selecBook4)
+
+            return res.render("data.html", { book1, book2, book3, book4 })
         } catch (error) {
             return res.render('index.html')
         }
@@ -52,6 +53,7 @@ async function manipulaDados(req, res) {
     if (del) {
         database.then(async(db) => {
             const unitDeleted = {
+                book,
                 unit
             }
             await deleteUnit(db, { unitDeleted })

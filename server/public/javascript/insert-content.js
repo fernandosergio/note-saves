@@ -3,6 +3,7 @@ const botDelete = window.document.getElementById('delete')
 
 botao.addEventListener('click', () => {
     const textarea = document.querySelectorAll('textarea');
+    const book = document.getElementById('inpBook')
     const select = document.getElementById('inpUnit').value
 
     const valortext = [];
@@ -11,9 +12,9 @@ botao.addEventListener('click', () => {
 
     const [content, notes, word] = valortext
 
-    const url = `http://localhost:3000?unit=${select}&content=${content}&notes=${notes}&words=${word}`
+    const url = `http://localhost:3000?book=${book}unit=${select}&content=${content}&notes=${notes}&words=${word}`
 
-    if (select != '0' && content.length != 0) {
+    if (book != '0' && select != '0' && content.length != 0) {
         api(url)
 
         textarea[0].value = ''

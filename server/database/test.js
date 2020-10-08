@@ -5,6 +5,7 @@ database.then(async(db) => {
 
     // dados
     unitsValue = {
+        book: 1,
         unit: 1,
         content: "sei la o que vai aqui da aula",
         notes: "tem isso aquilo tarana",

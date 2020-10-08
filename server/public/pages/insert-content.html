@@ -29,10 +29,21 @@
     <header id="container">
         <div id="form">
 
+            <div id="book">
+                <label for="inpBook"><p>Selecione o livro</p></label>
+                <select name="inpBook" id="inpBook">
+                    <option value="0" selected hidden>Selecione uma opção</option>
+                    <option value="1">Book one</option>
+                    <option value="2">Book Two</option>
+                    <option value="3">Book three</option>
+                    <option value="4">Book four</option>
+                </select>
+            </div>
+
             <div id="unidade">
                 <label for="inpUnit"><p>Selecione a Unit:</p></label>
                 <select name="inpUnit" id="inpUnit" required>
-                    <option value="0" selected hidden>Selecione uma Unit</option>
+                    <option value="0" selected hidden>Selecione uma opção</option>
                     {%for unit in unidades%}
                     <option value="{{loop.index}}">{{unidades[loop.index - 1]}}</option>
                     {%endfor%}

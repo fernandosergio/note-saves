@@ -2,7 +2,7 @@
 body {
     text-align: center;
     padding: .4rem;
-    background-color: #A3A0F2;
+    background-color: #41b8ea;
 }
 
 h1 {
@@ -67,10 +67,15 @@ button#send:hover {
         max-width: 700px;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 8vh 25vh 10vh 5vh;
+        grid-template-rows: 8vh 25vh 25vh 5vh;
+    }
+    div#book {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row: 1;
     }
     div#unidade {
-        grid-column-start: 1;
+        grid-column-start: 2;
         grid-column-end: 3;
         grid-row: 1;
     }
@@ -87,11 +92,6 @@ button#send:hover {
     div#palavra {
         grid-row: 3;
         grid-column-start: 1;
-        grid-column-end: 2;
-    }
-    div#significado {
-        grid-row: 3;
-        grid-column-start: 2;
         grid-column-end: 3;
     }
     div#botao {

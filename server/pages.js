@@ -40,11 +40,11 @@ function pageIndex(req, res) {
 async function pageBookOne(req, res) {
 
     const query = `
-    SELECT units.*
-    FROM units
+    SELECT *
+    FROM book1
     WHERE EXISTS(
-        SELECT units.unit
-        FROM units
+        SELECT book1.unit
+        FROM book1
         
     )
     ORDER BY unit ASC
@@ -52,8 +52,9 @@ async function pageBookOne(req, res) {
 
     try {
         const db = await database
-        const units = await db.all(query)
-        return res.render("book-one.html", { units })
+        const book1 = await db.all(query)
+
+        return res.render("book-one.html", { book1 })
     } catch (error) {
         console.log(error)
     }
@@ -61,8 +62,30 @@ async function pageBookOne(req, res) {
     return res.render("book-one.html")
 }
 
+async function pageBookTwo(req, res) {
+    const query = `
+    SELECT *
+    FROM book2
+    WHERE EXISTS(
+        SELECT book2.unit
+        FROM book2
+        
+    )
+    ORDER BY unit ASC
+    `
+
+    try {
+        const db = await database
+        const book2 = await db.all(query)
+
+        return res.render("book-two.html", { book2 })
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 function pageInsertData(req, res) {
     return res.render("insert-content.html", { unidades })
 }
 
-module.exports = { pageIndex, pageBookOne, pageInsertData }
+module.exports = { pageIndex, pageBookOne, pageBookTwo, pageInsertData }

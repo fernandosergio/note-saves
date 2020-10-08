@@ -1,4 +1,4 @@
-const { pageIndex, pageBookOne, pageInsertData } = require('./pages')
+const { pageIndex, pageBookOne, pageBookTwo, pageInsertData } = require('./pages')
 
 const express = require('express')
 const server = express()
@@ -14,5 +14,6 @@ server
     .use(express.static("server/public"))
     .get('/', pageIndex)
     .get('/book-one', pageBookOne)
+    .get('/book-two', pageBookTwo)
     .get('/insert-content', pageInsertData)
     .listen(5000, () => console.log('Server is running!'))

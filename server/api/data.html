@@ -17,8 +17,10 @@
 </head>
 
 <body>
+
     <div>
-        {%for unit in units%}
+        <h1>Book one</h1>
+        {%for unit in book1%}
         <div class="risquin">
             <div>
                 <p>Unit {{unit.unit}}</p>
@@ -44,6 +46,94 @@
         </div>
         {%endfor%}
     </div>
+
+    <div>
+        <h1>Book two</h1>
+        {%for unit in book2%}
+        <div class="risquin">
+            <div>
+                <p>Unit {{unit.unit}}</p>
+            </div>
+            <div>
+                <p>{{unit.content}}</p>
+            </div>
+            <div>
+                {% if unit.notes == "undefined"%}
+                <p>Sem conteúdo</p>
+                {% else %}
+                <p>{{unit.notes}}</p>
+                {%endif%}
+
+            </div>
+            <div>
+                {% if unit.words == "undefined"%}
+                <p>Sem conteúdo</p>
+                {% else %}
+                <p>{{unit.words}}</p>
+                {%endif%}
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+
+    <div>
+        <h1>Book three</h1>
+        {%for unit in book3%}
+        <div class="risquin">
+            <div>
+                <p>Unit {{unit.unit}}</p>
+            </div>
+            <div>
+                <p>{{unit.content}}</p>
+            </div>
+            <div>
+                {% if unit.notes == "undefined"%}
+                <p>Sem conteúdo</p>
+                {% else %}
+                <p>{{unit.notes}}</p>
+                {%endif%}
+
+            </div>
+            <div>
+                {% if unit.words == "undefined"%}
+                <p>Sem conteúdo</p>
+                {% else %}
+                <p>{{unit.words}}</p>
+                {%endif%}
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+
+    <div>
+        <h1>Book four</h1>
+        {%for unit in book4%}
+        <div class="risquin">
+            <div>
+                <p>Unit {{unit.unit}}</p>
+            </div>
+            <div>
+                <p>{{unit.content}}</p>
+            </div>
+            <div>
+                {% if unit.notes == "undefined"%}
+                <p>Sem conteúdo</p>
+                {% else %}
+                <p>{{unit.notes}}</p>
+                {%endif%}
+
+            </div>
+            <div>
+                {% if unit.words == "undefined"%}
+                <p>Sem conteúdo</p>
+                {% else %}
+                <p>{{unit.words}}</p>
+                {%endif%}
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+
 </body>
 
 </html>
